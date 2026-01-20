@@ -1,0 +1,39 @@
+###
+GET http://localhost:8000/
+
+###
+POST http://127.0.0.1:8000/juegos_mesa/
+content-type: application/json
+
+{
+    "nombre": "Feed the Kraken",
+    "categoria": "Competitivo",
+    "edad_minima": 10,
+    "jugadores_minimos": 4,
+    "marca": "Devir"
+}
+###
+POST http://127.0.0.1:8000/juegos_mesa/
+content-type: application/json
+
+{
+   "nombre": "Catan",
+    "categoria": "Estrategia",
+    "edad_minima": 8,
+    "jugadores_minimos": 4,
+    "marca": "Devir"
+}
+
+###
+GET http://127.0.0.1:8000/openapi.json
+
+###
+GET http://127.0.0.1:8000/juegos_mesa/
+
+###
+GET http://127.0.0.1:8000/juegos_mesa/2
+
+###
+GET http://127.0.0.1:8000/juegos_mesa/4
+###
+DELETE http://127.0.0.1:8000/juegos_mesa/1

@@ -1,0 +1,39 @@
+###
+GET http://localhost:8000/
+
+###
+POST http://127.0.0.1:8000/empleados/
+content-type: application/json
+
+{
+    "nombre": "Daniel",
+    "apellido": "DelCura",
+    "email": "daniel@dcura.es",
+    "edad": 20,
+    "dni": "334758656H",
+    "telefono": 654321987
+}
+###
+POST http://127.0.0.1:8000/empleados/
+content-type: application/json
+
+{
+    "nombre": "Sara",
+    "apellido": "Conde",
+    "email": "sara@conde.es",
+    "edad": 20,
+    "dni": "339090656H",
+    "telefono": 657895123
+}
+
+###
+GET http://127.0.0.1:8000/openapi.json
+
+###
+GET http://127.0.0.1:8000/empleados/
+
+###
+GET http://127.0.0.1:8000/empleados/2
+
+###
+GET http://127.0.0.1:8000/empleados/4
