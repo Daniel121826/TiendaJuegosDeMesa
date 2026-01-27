@@ -22,7 +22,7 @@ content-type: application/json
     "apellido": "Conde",
     "email": "sara@conde.es",
     "edad": 20,
-    "dni": "339090656H",
+    "dni": "349090656H",
     "telefono": 657895123
 }
 
@@ -37,3 +37,19 @@ GET http://127.0.0.1:8000/empleados/2
 
 ###
 GET http://127.0.0.1:8000/empleados/4
+
+###
+DELETE http://127.0.0.1:8000/empleados/2
+
+###
+PUT http://127.0.0.1:8000/empleados/1
+content-type: application/json
+
+{
+    "nombre": "Daniel",
+    "apellido": "DelCura",
+    "email": "daniel@dcura.es",
+    "edad": 24,
+    "dni": "334758656H",
+    "telefono": 654321987
+}
