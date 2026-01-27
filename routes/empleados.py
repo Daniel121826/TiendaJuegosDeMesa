@@ -33,7 +33,7 @@ def get_empleado(empleado_id: int, db: Session = Depends(get_db)):
 
 @router.post("/", response_model=EmpleadoResponse, status_code=status.HTTP_201_CREATED)
 def create_empleado(empleado: EmpleadoCreate, db: Session = Depends(get_db)):
-    existing_empleado = db.query(Empleado).filter(Empleado.email == empleado.email).first()
+    existing_empleado = db.query(Empleado).filter(Empleado.email == empleado.email or Empleado.dni == empleado.dni or Empleado.telefono == empleado.telefono).first()
     if existing_empleado:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
